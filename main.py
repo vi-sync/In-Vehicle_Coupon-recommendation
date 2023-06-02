@@ -2,9 +2,13 @@
 #
 #pip install pandas
 
-import streamlit as st
+subprocess.check_call([sys.executable, "-m", "pip", "install", 'catboost'])
 # noinspection PyUnresolvedReferences
 from catboost import CatBoostClassifier
+
+import streamlit as st
+# noinspection PyUnresolvedReferences
+
 import pickle as pkl
 
 st.title('In Vehicel Coupon Recommandation')
