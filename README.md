@@ -4,5 +4,5 @@ This data was collected through a survey conducted on Amazon Mechanical Turk. Th
 Performed extensive exploratory data analysis (EDA) and analyzed the data using univariate, bivariate, and multivariate techniques. Additionally, applied various supervised machine learning algorithms and compared their performance using F1 score and AUC score as the key performance indicators (KPIs). At the end of our analysis, the catboost algorithm emerged as the best performer.
 
 ### Check out the working example
-https://vi-sync-in-vehicle-coupon-recommendation-main-5j3sxe.streamlit.app/  (Migh take few minutes to start . Please be patient)
+https://vi-sync-in-vehicle-coupon-recommendation-main-5j3sxe.streamlit.app/  (Might take few minutes to start . Please be patient)
 https://youtu.be/9UUbo2D2b_Q
