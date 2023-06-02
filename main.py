@@ -1,6 +1,10 @@
 
+#
+#pip install pandas
+
 import streamlit as st
 # noinspection PyUnresolvedReferences
+from catboost import CatBoostClassifier
 import pickle as pkl
 
 st.title('In Vehicel Coupon Recommandation')
@@ -35,6 +39,7 @@ income_list = ['$37500 - $49999', '$62500 - $74999' ,'$12500 - $24999' ,'$75000 
                '$25000 - $37499' ,'$100000 or More' ,'$87500 - $99999','Less than $12500']
 car_list = ['nan' ,'Scooter and motorcycle' ,'crossover' ,'Mazda5' ,'do not drive'\
              ,'Car that is too old to install Onstar :D']
+visits_list = ['never','less1','1~3','4~8','gt8', 'nan']
 Bar_list = ['never', 'less1' ,'1~3' ,'gt8', 'nan' ,'4~8']
 CoffeeHouse_list = ['never', 'less1' ,'4~8' ,'1~3' ,'gt8', 'nan']
 CarryAway_list = ['nan' ,'4~8' ,'1~3', 'gt8' ,'less1' ,'never']
@@ -83,6 +88,8 @@ user_data.append(income_option)
 car_option                 = st.selectbox('15. Select Users Car. Select nan if not in the options',(car_list))
 user_data.append(car_option)
 
+
+
 Bar_option                  = st.selectbox('16. Select how many times the user goes to a bar every month',(Bar_list))
 user_data.append(Bar_option)
 CoffeeHouse_option          = st.selectbox('17. Select how many times the user goes to a CoffeHouse every month',(CoffeeHouse_list))
@@ -95,8 +102,7 @@ user_data.append(RestaurantLessThan20_option)
 Restaurant20To50_option    = st.selectbox('20. Select  how many times the user goes to a restaurant with an average expense per person \
                                     of less than $20 to 50 Dollars every month',(Restaurant20To50_list))
 user_data.append(Restaurant20To50_option)
-#toCoupon_GEQ5min_option    = st.selectbox('21. Select is the driving distance to the restaurant/bar for using the coupon is greater than 5 \
-                                #minutes. 1 if yes or 0 if no',(toCoupon_GEQ5min_list))
+
 user_data.append(1) # appending 1 for driving time for coupon as there is only one option
 toCoupon_GEQ15min_option  = st.selectbox('22. Select is the driving distance to the restaurant/bar for using the coupon is greater than 15 \
                                 minutes. 1 if yes or 0 if no',(toCoupon_GEQ15min_list))
