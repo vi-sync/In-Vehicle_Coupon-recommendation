@@ -1,6 +1,5 @@
 
-#
-pip install pandas
+
 import subprocess #https://stackoverflow.com/questions/12332975/how-can-i-install-a-python-module-within-code
 import sys
 subprocess.check_call([sys.executable, "-m", "pip", "install", 'catboost'])
