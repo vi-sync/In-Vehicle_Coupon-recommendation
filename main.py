@@ -4,7 +4,7 @@
 #import sys
 #subprocess.check_call([sys.executable, "-m", "pip", "install", 'catboost'])
 # noinspection PyUnresolvedReferences
-from catboost import CatBoostClassifier
+#from catboost import CatBoostClassifier
 
 import streamlit as st
 # noinspection PyUnresolvedReferences
